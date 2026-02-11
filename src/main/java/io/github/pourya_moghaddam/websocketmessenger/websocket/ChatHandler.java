@@ -2,6 +2,7 @@ package io.github.pourya_moghaddam.websocketmessenger.websocket;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.lang.NonNull;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -14,6 +15,7 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
+@Component
 public class ChatHandler extends TextWebSocketHandler {
 
     private final Map<WebSocketSession, String> sessions = new ConcurrentHashMap<>();
